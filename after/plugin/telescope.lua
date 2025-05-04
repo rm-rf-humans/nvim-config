@@ -6,10 +6,7 @@ vim.keymap.set('n', '<leader>fg', builtin.git_files, { desc = 'Telescope git fil
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 vim.keymap.set('n', '<leader>e', builtin.diagnostics, { desc = 'Telescope diagnostics' })
---open the directory of the current file
-vim.keymap.set('n', '<leader>ce', function()
-  builtin.find_files({ cwd = vim.fn.expand('%:p:h') })
-end, { desc = 'Telescope find files in current directory' })
+
 
 vim.keymap.set("n", "<leader>fa", function()
   require("telescope").extensions.file_browser.file_browser({
